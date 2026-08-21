@@ -1,0 +1,282 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#file-input {
+  display: none !important;
+}
+
+body,
+html {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  display: block;
+  margin: 10px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+#button {
+  background-color: cadetblue;
+  border-radius: 7px;
+  border: 2px solid rgb(123, 123, 0);
+  margin: 10px 20px 10px 20px;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: antiquewhite;
+  user-select: none;
+  transition: all 200ms ease-in-out;
+
+}
+
+#profile-img {
+  display: none;
+}
+
+#icon {
+  height: 50px !important;
+  width: 50px;
+  color: white;
+  display: inline-block;
+  background-color: green;
+}
+
+#profile-img-container {
+  width: 300px;
+  height: 50px !important;
+  background-color: red;
+  border-radius: 7px;
+  margin-left: 10px;
+  font-size: 30px;
+  padding: 10px 3px;
+  color: white;
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#button:hover {
+  background-color: rgb(90, 175, 178);
+  transform: scale(1.02);
+} */
+
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #090e25;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+#main {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   2. FORM & INPUT STYLES
+   ========================================================================== */
+#card-form {
+  background: #121936;
+  border: 1px solid #1f2a52;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Text and URL Inputs */
+#card-form input[type="text"],
+#card-form input[type="url"] {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #090e25;
+  border: 1px solid #2a386c;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#card-form input[type="text"]:focus,
+#card-form input[type="url"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+#card-form input::placeholder {
+  color: #64748b;
+}
+
+/* Custom File Upload Box */
+#profile-img-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #090e25;
+  border: 1px dashed #2a386c;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+#upload-img {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 620;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#upload-img:hover {
+  background-color: #4338ca;
+  transform: scale(1.02);
+}
+
+#upload-img:active {
+  transform: scale(0.98);
+}
+
+#profile-img-text {
+  font-size: 13px;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Submit Button */
+#card-form input[type="submit"] {
+  margin-top: 8px;
+  padding: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+#card-form input[type="submit"]:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+#card-form input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   3. GENERATED CARDS CONTAINER & CARD STYLES
+   ========================================================================== */
+#cards-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #121936;
+  border: 1px solid #1f2a52;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #4f46e5;
+  background-color: #090e25;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.card h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #818cf8;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.card p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+  word-break: break-word;
+  max-height: 100px;
+  overflow: hidden;
+}

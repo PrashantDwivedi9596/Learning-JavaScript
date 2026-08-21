@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card Generator</title>
+    <!-- FontAwesome CDN for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background: #090e25">
+    <div id="main">
+      <form id="card-form">
+        <!-- Hidden file input -->
+        <input
+          type="file"
+          id="file-input"
+          name="profile-img"
+          accept="image/*"
+          style="display: none"
+        />
+
+        <!-- Custom Upload Trigger -->
+        <div id="profile-img-container">
+          <div id="upload-img">
+            <i class="fa-solid fa-file-import"></i> Upload Image
+          </div>
+          <div id="profile-img-text">No file chosen</div>
+        </div>
+
+        <!-- Image URL Input -->
+        <input
+          type="url"
+          name="profile-img-link"
+          placeholder="URL of profile image gets more preference"
+        />
+
+        <input type="text" name="name" placeholder="Enter your name" required />
+        <input
+          type="text"
+          name="occupation"
+          placeholder="What do you do"
+          required
+        />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          required
+        />
+
+        <input type="submit" value="Create Card" />
+      </form>
+    </div>
+
+    <!-- Container where cards will be rendered -->
+    <div id="cards-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

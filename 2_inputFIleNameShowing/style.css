@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#inp {
+  display: none;
+}
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#button {
+  background-color: cadetblue;
+  border-radius: 7px;
+  border: 2px solid rgb(123, 123, 0);
+  margin: 10px 20px 10px 20px;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: antiquewhite;
+  user-select: none;
+  transition: all 200ms ease-in-out;
+
+}
+
+#button:hover {
+  background-color: rgb(90, 175, 178);
+  transform: scale(1.02);
+}

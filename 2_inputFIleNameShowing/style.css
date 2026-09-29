@@ -28,7 +28,7 @@ html {
   font-size: 30px;
   color: antiquewhite;
   user-select: none;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }
 

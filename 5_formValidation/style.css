@@ -1,0 +1,159 @@
+/* style.css */
+
+/* Base & Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1d1c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afe1e4;
+}
+
+/* Card Container */
+#container {
+  background: #161616;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(25, 25, 25, 0.08);
+  border: 1px solid #2c3e50;
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #a6cbf1;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* Fieldset Base Styling */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1.25rem;
+  transition: all 0.25s ease-in-out;
+  color: #afe1e4;
+}
+
+fieldset:focus-within {
+  border-color: #007bff;
+}
+
+legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.25s ease-in-out;
+  color: #afe1e4;
+}
+
+fieldset legend {
+  color: rgba(155, 242, 255, 0.948);
+
+  /* Adds space around the text */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  color: #afe1e4;
+  background: transparent;
+}
+
+/* ---------------------------------------------------- */
+/* Validation States for Fieldsets                      */
+/* ---------------------------------------------------- */
+
+/* Error Fieldset State */
+fieldset.error-fieldset {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+fieldset.error-fieldset legend {
+  color: #dc3545 !important;
+}
+
+/* Success Fieldset State */
+fieldset.correct-fieldset {
+  border-color: #198754;
+  background-color: #f8fffb;
+}
+
+fieldset.correct-fieldset legend {
+  color: #198754 !important;
+}
+
+/* Error Message Text */
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  min-height: 1.2em;
+}
+
+/* ---------------------------------------------------- */
+/* Submit Button & Validation States                    */
+/* ---------------------------------------------------- */
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled state (e.g. while form is invalid) */
+button[type="submit"]:disabled,
+button[type="submit"].btn-disabled {
+  background-color: #a5cbe8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Error state on Submit Button */
+button[type="submit"].btn-error {
+  background-color: #e74051;
+}
+
+button[type="submit"].btn-error:hover {
+  background-color: #bb2d3b;
+}
+
+/* Success state on Submit Button */
+button[type="submit"].btn-success {
+  background-color: #198754;
+}
+
+button[type="submit"].btn-success:hover {
+  background-color: #157347;
+}
+
+button[type="submit"].btn-success:active {
+  /* background-color: #0f5132; */
+  transform: scale(0.98);
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Form Validation</h1>
+      <form id="form" action="#">
+        <fieldset id="userFieldset">
+          <legend id="userLegend">UserName</legend>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value=""
+            placeholder="Enter your username"
+            autocomplete="off"
+            required
+          />
+          <span class="error-message" id="usernameError"></span>
+        </fieldset>
+
+        <fieldset id="passwordFieldset">
+          <legend id="passwordLegend">Password</legend>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value=""
+            placeholder="Enter your password"
+            required
+          />
+          <span class="error-message" id="passwordError"></span>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

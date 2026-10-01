@@ -1,0 +1,176 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile Form</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-white">
+    <!-- Main Container -->
+    <main class="min-h-screen flex flex-col items-center px-4 py-10">
+      <!-- Heading -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-white">
+          Create Your Profile
+        </h1>
+
+        <p class="mt-2 text-sm md:text-base text-slate-400">
+          Enter your details to create your profile card
+        </p>
+      </div>
+
+      <!-- Form Container -->
+      <div
+        class="form_container w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl shadow-black/40 p-6 md:p-8"
+      >
+        <form id="form" class="flex flex-col gap-5">
+          <!-- Username -->
+          <div>
+            <label class="block mb-2 text-sm font-semibold text-slate-200">
+              Username
+            </label>
+
+            <input
+              type="text"
+              placeholder="Enter your username"
+              id="userName"
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 hover:border-slate-600"
+            />
+          </div>
+
+          <!-- Profile Image -->
+          <div>
+            <label class="block mb-2 text-sm font-semibold text-slate-200">
+              Profile Image
+            </label>
+
+            <input
+              type="url"
+              placeholder="https://example.com/image.jpg"
+              id="profileImage"
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 hover:border-slate-600"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block mb-2 text-sm font-semibold text-slate-200">
+              Email
+            </label>
+
+            <input
+              type="email"
+              placeholder="you@example.com"
+              id="email"
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 hover:border-slate-600"
+            />
+          </div>
+
+          <!-- Role -->
+          <div>
+            <label class="block mb-2 text-sm font-semibold text-slate-200">
+              Role
+            </label>
+
+            <input
+              type="text"
+              placeholder="e.g. Frontend Developer"
+              id="role"
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 hover:border-slate-600"
+            />
+          </div>
+
+          <!-- Bio -->
+          <div>
+            <label class="block mb-2 text-sm font-semibold text-slate-200">
+              Bio
+            </label>
+
+            <textarea
+              rows="4"
+              placeholder="Write something about yourself..."
+              id="bio"
+              class="w-full px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-white placeholder-slate-500 outline-none resize-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 hover:border-slate-600"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-900/40 transition duration-200 hover:bg-indigo-500 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-indigo-500/30"
+          >
+            Create Profile
+          </button>
+        </form>
+      </div>
+
+      <!-- Profiles Section -->
+      <section class="w-full max-w-6xl mt-12">
+        <!-- Section Header -->
+        <div class="flex items-center justify-between mb-5">
+          <h2 class="text-2xl font-bold text-white">Profiles</h2>
+
+          <span
+            class="text-sm text-slate-400 bg-slate-900 px-4 py-2 rounded-full border border-slate-800"
+          >
+            Your Cards
+          </span>
+        </div>
+
+        <!-- Cards Container -->
+        <div
+          class="card_container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Example Card -->
+          <div
+            class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl shadow-black/30 transition duration-300 hover:-translate-y-1 hover:border-slate-700 hover:shadow-2xl"
+          >
+            <!-- Card Header -->
+            <div
+              class="h-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600"
+            ></div>
+
+            <!-- Profile Content -->
+            <div class="px-6 pb-6">
+              <!-- Profile Image -->
+              <div class="-mt-12 mb-4">
+                <img
+                  src="https://i.pravatar.cc/150?img=12"
+                  alt="Profile"
+                  class="w-24 h-24 rounded-full object-cover border-4 border-slate-900 shadow-xl"
+                />
+              </div>
+
+              <!-- Name -->
+              <h3 class="text-xl font-bold text-white">John Doe</h3>
+
+              <!-- Role -->
+              <p class="text-indigo-400 font-medium text-sm mt-1">
+                Frontend Developer
+              </p>
+
+              <!-- Bio -->
+              <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                Passionate developer who loves building beautiful and
+                interactive web applications.
+              </p>
+
+              <!-- Email -->
+              <div class="mt-5 pt-4 border-t border-slate-800">
+                <p class="text-sm text-slate-400">✉️ john@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
